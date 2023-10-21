@@ -3,6 +3,7 @@ title: GMM高斯混合模型
 abbrlink: 6d95358d
 date: 2023-10-20 20:53:10
 tags:
+cover: 
 ---
 123
 <!-- more -->
