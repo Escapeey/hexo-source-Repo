@@ -171,3 +171,7 @@ plugins:
 aplayer:
   meting: true
   asset_inject: false
+
+markdown:
+  plugins:
+    - '@renbaoshuo/markdown-it-katex'
