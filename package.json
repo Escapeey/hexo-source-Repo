@@ -38,6 +38,7 @@
     "hexo-server": "^3.0.0",
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-theme-landscape": "^1.0.0",
+    "hexo-wordcount": "^6.0.1",
     "katex": "^0.16.9",
     "live2d-widget-model-koharu": "^1.0.5",
     "workbox-build": "^7.0.0"

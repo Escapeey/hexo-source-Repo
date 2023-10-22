@@ -2,18 +2,21 @@
 title: GMM高斯混合模型
 abbrlink: 6d95358d
 date: 2023-10-20 20:53:10
-tags:
+tags: 学习, 代码
+katex: true
+category: 机器学习
 cover: 
 ---
 
 <!-- more -->
-## 1. GMM高斯混合模型原理
-### 1.1 混合密度模型
+## GMM高斯混合模型原理
+### 混合密度模型
 复杂的概率密度函数可以由简单密度函数线性组合构成
 $$p(x|\theta) = {\sum\limits_{k=1}^{M} a_{k}p_{k}(x|\theta_k)},\quad a_{k}>0,\quad \sum\limits_{k=1}^{M} a_{k}=1$$
 GMM 是混合密度模型的一个特例，由多个高斯（正态分布）函数的组合构成
 $$p(x) = \sum\limits_{k=1}^{M} a_{k}N(x;\mu_k,\Sigma_k)$$
-#### ==以下3点对于理解GMM模型的预测很重要 ！！！==
+#### 以下3点对于理解GMM模型的预测很重要
+<mark>！！！重点敲黑板！！！</mark>
 - 这里的$p(x)$是似然函数，完整表达应该是$p(x|\omega_i)$，这里的$\omega_i$表示是第$i$类数据，即训练GMM其实对每一类都单独学习一个GMM模型。
 - 比如：在分类问题中，如10分类问题。
     - 首先学习到10个不同的GMM模型（即似然函数公式）；
@@ -22,7 +25,7 @@ $$p(x) = \sum\limits_{k=1}^{M} a_{k}N(x;\mu_k,\Sigma_k)$$
     - 取这10个值里最大的所对应的类别作为这个样本的类别。
 - 这一切预测都是基于贝叶斯公式：
 $$P(\omega_i|x)={\dfrac{p(x|\omega_i)P(\omega_i)}{p(x)}}$$
-### 1.2 GMM的极大似然估计（参数估计）
+### GMM的极大似然估计（参数估计）
 GMM 需要估计的参数:
 $$\theta=(\alpha_1,\dots,\alpha_M,\mu_1,\dots,\mu_M,\Sigma_1,\dots,\Sigma_M)$$
 对数似然函数:
@@ -40,20 +43,23 @@ $$l({\theta})=\sum\limits_{i=1}^nln\left[\sum\limits_{k=1}^M a_{k}N(x_i;\mu_k,\S
 $$D_Y=\{y_1,\dots,y_n\}$$
 - 完整的数据集 $D=D_X\cup D_Y$，其中 $D_Y$为缺失的数据
 
-## 2. EM算法
-- ==重要总结！！！==
+## EM算法
+- 理解要点
+<mark>！！！重点敲黑板！！！</mark>
 对于$D_Y=\{y_1,\dots,y_n\}$,相对于武断的将每个训练样本确定为某个高斯产生的，更好的做法是计算每个样本由每个高斯产生的概率，后文的代码实现也是基于这一点的，其中$pdfs$为$m*k$维矩阵，每行为该样本由不同高斯产生的概率，共有m个样本。
-### 2.1 E步（Expectation）
+### E步（Expectation）
 - 隐变量的概率估计
 
 $$P(y_i=k|x_i)=\dfrac{P(y_i=k)P(x_i|y_i=k)}{P(x_i)}=\dfrac{a_{k}N(x_i;\mu_k,\Sigma_k)}{\sum\limits_{j=1}^M a_{j}N(x_i;\mu_j,\Sigma_j)} \tag{1}$$
 
-### 2.2 M步（Maximize）
+### M步（Maximize）
 - 每个高斯分布参数也需要由所有样本参与估计，同时需要
 - 考虑样本由不同高斯产生的概率
-$$\hat{a}_k=\dfrac{1}{n}\sum\limits_{i=1}^nP(y_i=k) \tag{2}$$$$\hat{\mu}_k=\dfrac{\sum\limits_{i=1}^nP(y_i=k)x_i}{\sum\limits_{i=1}^nP(y_i=k)} \tag{3}$$$$\hat{\Sigma}_k=\dfrac{\sum\limits_{i=1}^nP(y_i=k)(x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^t}{\sum\limits_{i=1}^nP(y_i=k)} \tag{4}$$
+$$\hat{a}_k=\dfrac{1}{n}\sum\limits_{i=1}^nP(y_i=k) \tag{2}$$ 
+$$\hat{\mu}_k=\dfrac{\sum\limits_{i=1}^nP(y_i=k)x_i}{\sum\limits_{i=1}^nP(y_i=k)} \tag{3}$$ 
+$$\hat{\Sigma}_k=\dfrac{\sum\limits_{i=1}^nP(y_i=k)(x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^t}{\sum\limits_{i=1}^nP(y_i=k)} \tag{4}$$
 
-## 3. 算法
+## 算法
 ---
 Input: 训练集$D_X = \{X_1,\dots,X_n\}$，高斯数$M$
 Output: GMM的模型参数 $\theta$
@@ -67,8 +73,8 @@ Output: GMM的模型参数 $\theta$
 - E步是在已知质心位置的条件下，把各点聚类到最近的质心；
 - M步是根据类内各点，调整质心位置。
 
-## 4. 实验及代码
-### 4.1 实验内容
+## 实验及代码
+### 实验内容
 1.	使用Python编程实现GMM算法：要求独立完成算法编程，禁止调用已有函数库或工具箱中的函数；
 2.	使用仿真数据测试程序的正确性：
     1. 两类2维各1000个训练样本；
@@ -80,8 +86,8 @@ Output: GMM的模型参数 $\theta$
     3.	使用10个类别GMM模型构成的分类器，分类MNIST-Test-Samples.csv中的10000个样本，与MNIST-Test-Labels.csv的类别标记比对，计算识别的正确率；
     4.	尝试设置不同的GMM模型超参数—高斯数，测试不同高斯数的GMM分类器的识别正确率；
 
-### 4.2 程序代码
-#### 4.2.1 导入库并制作工具函数
+### 程序代码
+#### 导入库并制作工具函数
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -129,7 +135,7 @@ def Gaussian(x, mu, covariance):
     return np.array(ret)
 
 ```
-#### 4.2.2 GMM面向对象实现
+#### GMM面向对象实现
 ``` python
 # GMM主体
 class GMM:
@@ -208,7 +214,7 @@ class GMM:
             self.covariance[k, :, :] = cov / np.sum(self.W[:, k]) 
 ```
 
-#### 4.2.3 Emu数据测试
+#### Emu数据测试
 **参数估计**
 ```python
 train_X = pd.read_csv(r'Emu-Train-Samples.csv', header=None)
@@ -271,7 +277,7 @@ print(accuracy)
 ```
 
 
-#### 4.2.4 MNIST数据集测试
+#### MNIST数据集测试
 ```python
 train_mnist_X = pd.read_csv(r'MNIST-Train-Samples.csv', header=None)
 train_mnist_Y = pd.read_csv(r'MNIST-Train-Labels.csv', header=None)
@@ -316,6 +322,6 @@ for i in range(2, 6):
     print("正确识别率: ", accuracy)
 ```
 
-## 5. 遇到的问题及解决方法
+## 遇到的问题及解决方法
 - 高斯均值初始化问题：
     在前几轮训练中有几次收敛到局部最优解，即有个别高斯模型重叠覆盖了同一个训练样本，或者一个高斯完全覆盖了另一个高斯的样本范围。这是由于初始化不够好导致的，起初选用的是固定选点，后续使用的是随机样本选点，更好的做法应该是使用Kmeans聚类选择初始化点。
