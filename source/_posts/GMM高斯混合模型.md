@@ -2,7 +2,7 @@
 title: GMM高斯混合模型
 abbrlink: 6d95358d
 date: 2023-10-20 20:53:10
-tags: 学习, 代码
+tags: 算法
 katex: true
 category: 机器学习
 cover: 
