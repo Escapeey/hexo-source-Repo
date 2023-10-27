@@ -52,10 +52,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: url(https://pic.netbian.com/uploads/allimg/230922/164533-16953723335065.jpg)
+index_img: https://pic.netbian.com/uploads/allimg/230922/164533-16953723335065.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: url(https://pic.netbian.com/uploads/allimg/230922/164533-16953723335065.jpg)
+default_top_img: https://pic.netbian.com/uploads/allimg/230922/164533-16953723335065.jpg
 
 # The banner image of archive page
 archive_img:
