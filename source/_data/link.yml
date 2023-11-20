@@ -13,3 +13,11 @@
       link: https://www.bilibili.com/
       avatar: https://i0.imgs.ovh/2023/10/27/FRrsA.png
       descr: 视频网站
+
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: 笔趣阁
+      link: https://www.2biqu.com/
+      avatar: :https://i.imgs.ovh/2023/11/16/ndO8j.png
+      descr: 笔趣阁
