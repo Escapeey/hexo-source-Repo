@@ -1,5 +1,6 @@
 ---
 title: 数据库系统3-SQL语言
+abbrlink: d733c799
 date: 2023-11-19 17:00:46
 tags:
 ---
