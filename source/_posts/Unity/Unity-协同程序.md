@@ -60,7 +60,7 @@ MyCoroutine(1, "123");
 ```
 - 常用开启方式
 ```C#
-Enumerator ie = MyCoroutine(1, "123");
+IEnumerator ie = MyCoroutine(1, "123");
 StartCoroutine(ie);
 ```
 
