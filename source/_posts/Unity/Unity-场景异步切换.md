@@ -5,6 +5,8 @@ tags: C#
 category: Unity
 ---
 ## 场景同步切换
+<font color='green'>SceneManger.LoadScene()</font>
+
 ```C#
 SceneManger.LoadScene("TestScene");
 ```
@@ -12,6 +14,8 @@ SceneManger.LoadScene("TestScene");
 - 因为先删除当前场景中所有对象，且去加载新场景的相关信息，会很耗时，造成卡顿
 
 ## 场景异步切换
+<font color='green'>SceneManger.LoadSceneAsync()</font>
+
 和**资源异步加载**几乎一致，有两种方法
 ### 通过事件回调函数 异步加载
 ```C#

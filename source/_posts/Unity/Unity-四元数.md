@@ -36,6 +36,7 @@ tags: C#
 
 ## Unity中的四元数
 <font color=green>$Quaternion$</font>是Unity中表示四元数的结构体
+
 ### 初始化
 轴角对公式初始化
 - 方法一 (为计算原理，不用)
@@ -87,6 +88,8 @@ void Update()
 
 ### 四元数的常用方法
 #### 单位四元数 用于初始化对象
+<font color=green>Quatenion.identity</font>
+
 - 当角度为0或者360度时
 - 单位四元数表示没有旋转量
 - 对于任何给定轴都有单位四元数
@@ -98,9 +101,12 @@ Instantiate(testObj, Vector3.zero, Quaternion.identity);
 ```
 
 #### 四元数插值运算
-$result = start + (end-start) * t$
+<font color=green>Quaternion.Slerp()</font>
 
-    Quaternion.Slerp(start, end, t);
+$result = start + (end-start) * t$
+```C#
+Quaternion.Slerp(start, end, t);
+```
 - 四元数同样提供如同Vector3的插值运算$Lerp$和$Slerp$
 - 二者区别不大,<font color=red>$Slerp$效果好一些，建议使用</font>
 
@@ -125,9 +131,11 @@ void Update()
 ```
 
 #### 向量指向转四元数
-    Quaternino.LookRotation(面朝向量);
+<font color=green>Quaternino.LookRotation(面朝向量)</font>
+
 - $LookRotation$方法将传入的面朝向量转换为对应的四元数角度信息
 <img src="..\img\Unity\LookRotation演示.png" width="30%" height="30%">
+
 - 举例：当$A$面朝向想改变时，只需要把$A$和$B$之间的向量$\overrightarrow{AB}$传入该函数，便可以得到目标四元数角度信息，之后将$A$四元数角度信息改为得到的信息即可转向
 ```C#
 Quaternion q = Quaternion.LookRotation(B.position - A.position);
@@ -136,7 +144,7 @@ A.rotation = q;
 
 ### 四元数计算
 #### 四元数相乘
-- 两个四元数相乘得到一个新的四元数，代表两个旋转量的叠加
+- 两个四元数相乘得到一个<font color=red>新的四元数</font>，代表两个旋转量的叠加
 - 相当于旋转
 - <font color=red>注意：旋转相对的坐标系 是物体自身坐标系</font>
 ```C#
@@ -145,7 +153,7 @@ this.transform.rotation *= q;
 ```
 
 #### 四元数乘向量
-- 四元数乘向量返回一个新向量
+- 四元数乘向量<font color=red>返回一个新向量</font>
 - 可以将指定向量旋转对应四元数的旋转量，相当于旋转向量
 - <font color=red>注意：一定是四元数乘向量 先后顺序不能改变</font>
 ```C#
