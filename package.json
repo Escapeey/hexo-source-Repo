@@ -41,6 +41,7 @@
     "hexo-wordcount": "^6.0.1",
     "katex": "^0.16.9",
     "live2d-widget-model-koharu": "^1.0.5",
+    "live2d-widget-model-tororo": "^1.0.5",
     "workbox-build": "^7.0.0"
   },
   "devDependencies": {

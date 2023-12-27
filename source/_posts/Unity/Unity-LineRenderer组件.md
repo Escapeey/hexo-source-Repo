@@ -1,8 +1,9 @@
 ---
 title: Unity-LineRenderer组件
-date: 2023-12-25 21:48:47
 tags: C#
 category: Unity
+abbrlink: af0e4a0a
+date: 2023-12-25 21:48:47
 ---
 ## LineRenderer是什么
 ```LineRenderer```是Unity提供的一个**用于画线的组件**

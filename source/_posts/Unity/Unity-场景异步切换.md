@@ -1,8 +1,9 @@
 ---
 title: Unity-场景异步切换
-date: 2023-12-25 15:58:08
 tags: C#
 category: Unity
+abbrlink: 33841c46
+date: 2023-12-25 15:58:08
 ---
 ## 场景同步切换
 <font color='green'>SceneManger.LoadScene()</font>
