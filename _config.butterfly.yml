@@ -10,7 +10,7 @@ nav:
 # Menu 目錄
 menu:
   Home: / || fas fa-home
-  留言板: /comments/ || fas fa-envelope
+  Messageboard: /comments/ || fas fa-envelope
   Archives: /archives/ || fas fa-archive
   Tags: /tags/ || fas fa-tags
   Categories: /categories/ || fas fa-folder-open
@@ -986,7 +986,7 @@ envelope_comment:
   height: #1050px，信封划出的高度
   path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
   front_matter: #【可选】comments页面的 front_matter 配置
-    title: 留言板
+    title: Messageboard
     comments: true
 
 
