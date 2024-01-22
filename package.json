@@ -16,7 +16,7 @@
     "@renbaoshuo/markdown-it-katex": "^2.0.2",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
-    "hexo": "^6.3.0",
+    "hexo": "^7.1.1",
     "hexo-abbrlink": "^2.2.1",
     "hexo-butterfly-clock-anzhiyu": "^1.1.8",
     "hexo-butterfly-envelope": "^1.0.15",
