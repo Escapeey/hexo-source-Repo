@@ -1,8 +1,9 @@
 ---
 title: Unity-NGUI之基础及组合控件
-date: 2024-01-05 19:49:55
 tags: C#
 category: Unity
+abbrlink: f24ad560
+date: 2024-01-05 19:49:55
 ---
 
 <img src="../../../img/Unity/NGUI_Root_缩放模式设置.bmp" width="70%" height="50%">

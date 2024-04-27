@@ -1,8 +1,9 @@
 ---
 title: DFS和BFS
-date: 2024-04-03 11:31:37
 tags: Algorithm
 category: Algorithm
+abbrlink: f5273844
+date: 2024-04-03 11:31:37
 ---
 # DFS
 回溯算法，其实就是dfs的过程，这里给出dfs的代码框架：
