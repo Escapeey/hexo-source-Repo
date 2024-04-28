@@ -45,7 +45,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: /img/head1.png
+  img: https://s2.loli.net/2024/04/28/SYKIpknzBdVwiEW.jpg
   effect: false
 
 # Disable all banner image
