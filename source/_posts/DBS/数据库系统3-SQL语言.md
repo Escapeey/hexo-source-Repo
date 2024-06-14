@@ -2,7 +2,8 @@
 title: 数据库系统3-SQL语言
 abbrlink: d733c799
 date: 2023-11-19 17:00:46
-tags:
+tags: 数据库系统
+category: 数据库系统
 ---
 <a url="https://www.cnblogs.com/rqy0526/p/11015943.html#:~:text=%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8%201%201.%20C%20%28Create%29%3A%E5%88%9B%E5%BB%BA%201.%20%E8%AF%AD%E6%B3%95%EF%BC%9A%20create,%E5%88%97%E5%90%8D%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%3B%204.%20...%204%204.%20D%20%28Delete%29%3A%E5%88%A0%E9%99%A4">数据库操作的基本语法大全</a>
 

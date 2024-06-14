@@ -2,7 +2,9 @@
 title: HMM隐马尔可夫模型
 abbrlink: 1cf48c7a
 date: 2023-10-24 08:04:56
-tags:
+tags: 算法
+katex: true
+category: 机器学习
 ---
 ## HMM隐马尔可夫模型
 ### 观察序列与观察值
