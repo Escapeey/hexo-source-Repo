@@ -16,13 +16,21 @@
 
     - name: 笔趣阁
       link: https://www.2biqu.com/
-      avatar: :https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
+      avatar: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
       descr: 小说网站
 
-- class_name: 网站
+- class_name: 知识收藏网站
   class_desc: 值得推荐的网站
   link_list:
     - name: 跟我一起写Makefile
       link: https://seisman.github.io/how-to-write-makefile/
-      avatar: :https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
+      avatar: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
       descr: C语言相关    
+      
+- class_name: 专业网站
+  class_desc: 技术专业网站
+  link_list:
+    - name: civitai
+      link: https://civitai.com/
+      avatar: 
+      descr: AI绘画  
