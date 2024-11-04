@@ -1,7 +1,8 @@
 ---
 title: SD学习
 date: 2024-11-02 18:13:10
-tags:
+tags: AI绘画
+category: AI绘画
 ---
 **参考课程**: [SD绘画](https://space.bilibili.com/1814756990/channel/collectiondetail?sid=1285674)
 **提示词+参数+模型**
@@ -76,12 +77,12 @@ tags:
     - (white flower:1.5)
 
 
-<img src="..\img\SD\进阶提示词语法.png" width="100%" height="100%" align="middle">
+<img src="..\..\img\SD\进阶提示词语法.png" width="100%" height="100%" align="middle">
 
 ### 反向提示词
 标准化提示词-抄作业
 ```
-NSFW, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, age spot, (ugly:1.331), (duplicate:1.331), (morbid:1.21), (mutilated:1.21), (tranny:1.331), mutated hands, (poorly drawn hands:1.5), blurry, (bad anatomy:1.21), (bad proportions:1.331), extra limbs, (disfigured:1.331), (missing arms:1.331), (extra legs:1.331), (fused fingers:1.61051), (too many fingers:1.61051), (unclear eyes:1.331), lowers, bad hands, missing fingers, extra digit, bad hands, missing fingers, (((extra arms and legs))),
+NSFW, (worst quality:2), (low quality:2), (normal quality:2), lowers, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, age spot, (ugly:1.331), (duplicate:1.331), (morbid:1.21), (mutilated:1.21), (tranny:1.331), mutated hands, (poorly drawn hands:1.5), blurry, (bad anatomy:1.21), (bad proportions:1.331), extra limbs, (disfigured:1.331), (missing arms:1.331), (extra legs:1.331), (fused fingers:1.61051), (too many fingers:1.61051), (unclear eyes:1.331), lowers, bad hands, missing fingers, extra digit, bad hands, missing fingers, (((extra arms and legs))),
 ```
 
 # 出图参数
@@ -161,10 +162,70 @@ NSFW, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal qua
         - Deep Negative (真人模型)
         - Easy Negative (二次元)
 ## LoRA
-- 存储地址: `根目录\models\Lora\`
+- 存储地址: `根目录\models\Lora`
 - 使用: 在提示词框里用 `<lora:lora模型名称>` 启用
 - 一般要确定权重
 - 类似彩页传单，比如要生成佩奇，它直接写明了佩奇是什么，有什么特点，怎么样呈现出佩奇
+- 一般有一些触发词
+## 导入方式
+- 直接放入文件夹中
+    - 存储地址: `根目录\models\Lora`
+    - 使用`<lora:lora模型名称>` 启用
+- 使用addtional network选项(额外附加网络 / 扩展模型)
+    - 一个红色按钮
+- 使用`Addtional Network`扩展
+    - 在折叠选单`Addtional Networks`中添加
+    - 存储地址: `根目录\extensions\sd-webui-addtional-networks\models\Lora`
+    - 可以改为webui默认地址，将两个lora路径统一
+    - 记得勾选启用
+## 使用方法
+### 人物角色形象
+- 例子：制作赛博coser
+    - 真实系大模型+lora
+- 有类lora会提供某类特定人物形象展示
+    - 特定方向上的角色美化
+    - 可以当作调味剂，权重0.2-0.3
+    - 例子：
+        - Fashion girl 作者是使用很多个人审美的时尚女性制作的lora
+        - Asian male 使用亚洲男性
+
+### 画风或风格
+- 替代Hypernetwork
+- 如吉卜力画风lora
+- 画风类lora比人物类lora影响更大，可以适当降低一点画风类lora的权重
+
+## 概念图
+- Gacha splash LORA (立绘lora)
+- Anime Tarot Card Art Style LoRA (塔罗牌)
+- zyd232's Stasis Pod/Chamber (密封舱)
+- mugshot lora (档案照片)
+- 一定要看作者的readme
+
+## 服饰
+- 权重一定不要太高，如果太高容易没有人只有衣服(这是由训练时只用衣服导致的)
+- 绘制特殊、具体的服饰 (比如你就要某个角色穿的衣服)
+- 如果你想要强调某一个特质，比如机甲，可以用多个lora叠加强调
+- 机甲衣服
+    - 机甲的英文(Mecha)
+    - 推荐的checkpoint：
+        - 二次元: Cetus-Mix
+        - 真实系: Experience
+    - 机甲的lora
+    - 可以加一些提示词：cyberpunk、futuristic
+    - 如果要机甲与人紧密结合：robotic arms/legs、mechanical parts(机械义体)
+<img src="..\..\img\SD\机甲提示词.png" width="100%" height="100%" align="middle">
+
+- 推荐：
+    - hanfu 汉服
+    - holographic clothing 镭射服装
+
+
+## 物体/特定元素
+- 产品设计
+- 可以使用局部重绘的方法将这些物品引入到作品内
+    - 先画全图(不开LoRA)、再画小的(重绘)(打开LoRA)
+- [使用局部重绘引入头盔](https://www.bilibili.com/video/BV1nL411B7XT?spm_id_from=333.788) 22:10
+
 
 # 高清修复、细节优化、无损放大
 ## 高清修复(文生图)
@@ -208,7 +269,7 @@ upscale放大脚本
     - 使重绘区域拼接回去时更加自然(保持10以下)
 ## inPaint Sketch(绘制/局部重绘(手涂蒙版))
 - 这里用画笔涂的就不是蒙版选区了，是真正的图形内容
-<img src="..\img\SD\inPaint_Sketch.png" width="100%" height="100%" align="middle">
+<img src="..\..\img\SD\inPaint_Sketch.png" width="100%" height="100%" align="middle">
 
 - 蒙版透明度: 绘制的颜色印在画面上的显著程度(一般维持默认0,完全不透明)
 ## inPaint Upload(上传蒙版)
@@ -221,3 +282,74 @@ upscale放大脚本
     - LLUL权重
 - CutOff 
     - 解决提示词间的互相干预
+
+# ControlNet
+## 基本原理
+类似图生图
+<img src="..\..\img\SD\ControlNet结构.png" width="70%" height="70%" align="middle">
+
+## 安装和下载模型
+- 需要下载模型
+- 下载模型 `.pth` 和 对应的 `.yaml`
+- 模型地址(yaml文件也要放进去): `根目录\extensions\sd-webui-controlnet\models`
+
+## 基本使用方法
+- 先在ControlNet栏中导入一张图片(目标姿势图片)
+- 再选择预处理器(Annotator)
+    - 从图片中提取姿势的叫`Openpose`
+- 再选择和当前预处理器匹配的**控制模型**
+
+- PS: 
+    - 如果是图生图使用，则如果空着`ControlNet`栏的图片，则使用原图姿势
+    - 如果导入的是骨骼图，则在预处理器中选**无**, 然后使用生成骨骼图时对应的模型
+## 参数设置 (控制效果的强弱)
+- 低显存模型 (如果cuda out of memory时用, 代价是速度慢一些)
+- Pixel Perfect (推荐选中)
+    - 自动计算预处理器产出图像的最合适分辨率, 避免因为尺寸不合导致的图像模糊变形
+    - 不用手动设置预处理分辨率了
+- Allow Preview 打开小的预处理器窗口
+- 可以通过预处理器旁边的 **爆炸** 按钮来生成图片的**骨骼图**
+
+- Control Weight 控制权重 (一般默认1)
+- Starting Control Step 控制ControlNet什么时候(迭代过程)生效
+- Ending Control Step 控制ControlNet什么时候(迭代过程)失效
+- Control Mode 控制ControlNet和提示词哪个更重要 (一般选blance)
+<img src="..\..\img\SD\ControlNet_ControlMode.png" width="70%" height="70%" align="middle">
+
+- lookback 默认关闭
+- 其余一些参数是不同预处理器对应的，一般维持默认即可
+## ControlNet五大模型
+### openpose
+- openpose_face
+- openpose_faceonly (适合大头照)
+- openpose_hand 
+- openpose_full (包含所有细节)
+
+### depth
+用来对场景的还原
+<img src="..\..\img\SD\ControlNet_depth.png" width="70%" height="70%" align="middle">
+
+- 生成具有空间感的图片
+
+- 可以解决肢体交叉问题, 比如手在头前还是头后 (但人体形状会非常固定)
+<img src="..\..\img\SD\ControlNet_Depth解决肢体交叠问题.png" width="70%" height="70%" align="middle">
+
+
+### canny
+- 使用边缘 精准的还原
+- 如果输入图片是线稿, 用`inverse`的预处理器交换黑白
+### softedge / HED
+- 主要关注轮廓
+<img src="..\..\img\SD\ControlNet_HED和Canny的区别.png" width="70%" height="70%" align="middle">
+
+### scribble(涂鸦乱画)
+- 可以用乌龟图片生成乌龟形太空飞船
+
+## 多重ControlNet应用
+
+- 在配置里`ControlNet`选单中, 通过`MultiControlNet(多重ControlNet)`来设置最大模型数量
+
+- 经典的组合 OpenPose和depth
+[组合解决手臂挡脸问题](https://www.bilibili.com/video/BV1Ds4y1e7ZB?spm_id_from=333.788) 25:15
+
+
