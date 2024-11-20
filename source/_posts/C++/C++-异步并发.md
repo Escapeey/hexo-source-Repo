@@ -1,8 +1,9 @@
 ---
 title: C++-异步并发
-date: 2024-09-01 11:15:42
 tags: C++
 category: C++
+abbrlink: 36ef8af9
+date: 2024-09-01 11:15:42
 ---
 
 # async

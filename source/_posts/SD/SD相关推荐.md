@@ -1,8 +1,9 @@
 ---
 title: SD相关推荐
-date: 2024-11-04 16:02:38
 tags: AI绘画
 category: AI绘画
+abbrlink: 49df12fd
+date: 2024-11-04 16:02:38
 ---
 # 大模型
 - TMND-Mix 二次元-细节惊人

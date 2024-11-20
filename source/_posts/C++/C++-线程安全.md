@@ -1,8 +1,9 @@
 ---
 title: C++-线程安全
-date: 2024-08-01 11:42:34
 tags: C++
 category: C++
+abbrlink: b0174cac
+date: 2024-08-01 11:42:34
 ---
 [参考博客](http://www.seestudy.cn/?list_9/35.html)
 

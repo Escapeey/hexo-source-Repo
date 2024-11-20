@@ -1,8 +1,9 @@
 ---
 title: C++-模板
-date: 2024-07-01 11:35:11
 tags: C++
 category: C++
+abbrlink: db164a07
+date: 2024-07-01 11:35:11
 ---
 
 # 模板概念

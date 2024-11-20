@@ -1,9 +1,10 @@
 ---
 title: select和epoll
+tags:
+  - c
+  - 网络编程
+abbrlink: e112f59a
 date: 2024-01-08 19:51:20
-tags: 
-- c
-- 网络编程
 ---
 
 # select

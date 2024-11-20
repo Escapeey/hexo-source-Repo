@@ -1,8 +1,9 @@
 ---
 title: SD学习
-date: 2024-11-02 18:13:10
 tags: AI绘画
 category: AI绘画
+abbrlink: e5cb238c
+date: 2024-11-02 18:13:10
 ---
 **参考课程**: [SD绘画](https://space.bilibili.com/1814756990/channel/collectiondetail?sid=1285674)
 **提示词+参数+模型**
