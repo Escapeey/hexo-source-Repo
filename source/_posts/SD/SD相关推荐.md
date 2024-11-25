@@ -3,6 +3,7 @@ title: SD相关推荐
 tags: AI绘画
 category: AI绘画
 abbrlink: 49df12fd
+cover: 'https://s2.loli.net/2024/11/25/A5y92mueBpqr8F6.png'
 date: 2024-11-04 16:02:38
 ---
 # 大模型

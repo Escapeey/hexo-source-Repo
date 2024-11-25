@@ -3,6 +3,7 @@ title: SD学习
 tags: AI绘画
 category: AI绘画
 abbrlink: e5cb238c
+cover: 'https://s2.loli.net/2024/11/25/KLGtlVmyhuOXzgv.png'
 date: 2024-11-02 18:13:10
 ---
 **参考课程**: [SD绘画](https://space.bilibili.com/1814756990/channel/collectiondetail?sid=1285674)

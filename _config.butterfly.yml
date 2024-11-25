@@ -52,10 +52,15 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://s2.loli.net/2024/04/27/Ncxy9ugqVbF38rR.jpg
+index_img: https://s2.loli.net/2024/11/25/NiYl7vG43ZDoWkt.jpg
+
+# 备用壁纸
+# https://s2.loli.net/2024/04/27/Ncxy9ugqVbF38rR.jpg
+# https://s2.loli.net/2024/11/25/or5FiKqpZXEgjSf.jpg
+# https://s2.loli.net/2024/11/25/NiYl7vG43ZDoWkt.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://s2.loli.net/2024/04/27/Ncxy9ugqVbF38rR.jpg
+default_top_img: https://s2.loli.net/2024/11/25/NiYl7vG43ZDoWkt.jpg
 
 # The banner image of archive page
 archive_img:

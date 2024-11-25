@@ -6,18 +6,12 @@
       avatar: https://ntmydb.github.io/images/avatar.jpg
       descr: Whispering`Blog
 
-- class_name: 娱乐网站
-  class_desc: 常用娱乐网站链接
+- class_name: 大佬网站
+  class_desc: 一些大佬的个人博客
   link_list:
-    - name: Bilibili
-      link: https://www.bilibili.com/
-      avatar: https://s2.loli.net/2024/06/14/gXBLVG6cozCJnbj.png
-      descr: 视频网站
-
-    - name: 笔趣阁
-      link: https://www.2biqu.com/
-      avatar: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
-      descr: 小说网站
+    - name: 轻笑Chuckle
+      link: https://www.qcqx.cn/
+      descr: 轻笑Chuckle
 
 - class_name: 知识收藏网站
   class_desc: 值得推荐的网站
@@ -34,3 +28,11 @@
       link: https://civitai.com/
       avatar: 
       descr: AI绘画  
+
+- class_name: 珍藏网站
+  class_desc: 个人珍藏
+  link_list:
+    - name: Minna Sundberg
+      link: https://www.hummingfluff.com/
+      avatar: https://s2.loli.net/2024/11/25/NiYl7vG43ZDoWkt.jpg
+      descr: 漫画家Minna Sundberg的网站
