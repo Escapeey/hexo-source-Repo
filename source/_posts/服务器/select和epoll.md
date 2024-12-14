@@ -1,7 +1,7 @@
 ---
 title: select和epoll
 tags:
-  - c
+  - C
   - 网络编程
 abbrlink: e112f59a
 date: 2024-01-08 19:51:20

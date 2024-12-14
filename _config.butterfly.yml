@@ -260,7 +260,7 @@ aside:
       link: https://github.com/Escapeey
   card_announcement:
     enable: true
-    content: 欢迎来到我的个人小站，这里记录了我的学习、开发日常以及一些个人思考，请多多指教！
+    content: 嗨，欢迎来到我的个人小站，这里记录了我的学习、开发日常以及一些个人思考，请多多指教！
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
